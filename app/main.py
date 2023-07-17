@@ -30,8 +30,6 @@ def get_db():
 
 @app.get("/", response_model=User)
 async def root(action:str, admin_id:int, chain_id: int, app_id: int,lang:str, authtoken:Union[str, None] = None, db : Session = Depends(get_db)):
-#    if action == 'open':
-#       return Response(status_code=status.HTTP_200_OK)
     if action == 'uninstall':
          db_user = db.query(Users).filter(Users.app_id == app_id).first()
          db.delete(db_user)
