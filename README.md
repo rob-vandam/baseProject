@@ -8,11 +8,9 @@ This programm is free to use and distribute.
 
 Install the requirements from requirements.txt
 
-Run the Alembic migration:
-alembic upgrade head
+Run the Alembic migration: **alembic upgrade head**
 
-Start the development server:
-uvicorn app.main:app --reload
+Start the development server: **uvicorn app.main:app --reload**
 
 Install the app in Camping.care:
 
